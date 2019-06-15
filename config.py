@@ -14,6 +14,6 @@ class Config(object):
     MAIL_SERVER = os.environ.get('MAIL_SERVER')
     MAIL_PORT = int(os.environ.get('MAIL_PORT') or 25)
     MAIL_USE_TLS = os.environ.get('MAIL_USE_TLS') is not None
-    MAIL_USERNAME = os.environ.get('mc136782643@gmail.com')
-    MAIL_PASSWORD = os.environ.get('lilu136782643!')
-    ADMINS = ['mc136782643@gmail.com']#ADMINS配置变量是将接收错误报告的电子邮件地址列表，因此您自己的电子邮件地址应该在该列表中。
+    MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
+    MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
+    ADMINS = ['your-email@example.com']#ADMINS配置变量是将接收错误报告的电子邮件地址列表，因此您自己的电子邮件地址应该在该列表中。
