@@ -8,8 +8,8 @@ from app.models import User, Post
 
 class UserModelCase(unittest.TestCase):
     def setUp(self):
-        app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite://'
-        db.create_all()
+        app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite://' #测试期间让SQLAlchemy使用内存中的SQLite数据库
+        db.create_all() # 快速创建所有的数据表
 
     def tearDown(self):
         db.session.remove()
