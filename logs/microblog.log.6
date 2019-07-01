@@ -1,4 +1,33 @@
-2019-07-01 08:02:16,141 ERROR: Exception on / [GET] [in /Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/flask/app.py:1780]
+2019-06-15 08:35:58,072 INFO: Microblog startup [in /Users/mosson/Desktop/mossonInfo/flaskBlogs/flaskBlog/app/__init__.py:46]
+2019-06-18 07:28:36,969 INFO: Microblog startup [in /Users/mosson/Desktop/mossonInfo/flaskBlogs/flaskBlog/app/__init__.py:46]
+2019-06-18 07:28:45,258 INFO: Microblog startup [in /Users/mosson/Desktop/mossonInfo/flaskBlogs/flaskBlog/app/__init__.py:46]
+2019-06-18 07:32:08,397 INFO: Microblog startup [in /Users/mosson/Desktop/mossonInfo/flaskBlogs/flaskBlog/app/__init__.py:46]
+2019-06-24 07:20:31,578 INFO: Microblog startup [in /Users/mosson/Desktop/mossonInfo/flaskBlogs/flaskBlog/app/__init__.py:46]
+2019-07-01 07:30:27,189 INFO: Microblog startup [in /Users/mosson/Documents/学习/mossonInfo/flaskBlogs/flaskBlog/app/__init__.py:46]
+2019-07-01 07:35:51,267 ERROR: Exception on /login [POST] [in /Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/flask/app.py:1780]
+Traceback (most recent call last):
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/mosson/Documents/学习/mossonInfo/flaskBlogs/flaskBlog/app/routes.py", line 49, in login
+    if user is None or not user.check_password(form.password.data):
+  File "/Users/mosson/Documents/学习/mossonInfo/flaskBlogs/flaskBlog/app/models.py", line 43, in check_password
+    return check_password_hash(self.password_hash, password)
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/werkzeug/security.py", line 218, in check_password_hash
+    if pwhash.count("$") < 2:
+AttributeError: 'NoneType' object has no attribute 'count'
+2019-07-01 07:38:24,372 INFO: Microblog startup [in /Users/mosson/Documents/学习/mossonInfo/flaskBlogs/flaskBlog/app/__init__.py:46]
+2019-07-01 07:57:23,606 INFO: Microblog startup [in /Users/mosson/Documents/学习/mossonInfo/flaskBlogs/flaskBlog/app/__init__.py:46]
+2019-07-01 07:57:25,174 ERROR: Exception on /logout [GET] [in /Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/flask/app.py:1780]
 Traceback (most recent call last):
   File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/flask/app.py", line 2311, in wsgi_app
     response = self.full_dispatch_request()
@@ -53,7 +82,3 @@ Traceback (most recent call last):
   File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/sqlalchemy/orm/loading.py", line 693, in _populate_full
     dict_[key] = getter(row)
 ValueError: Couldn't parse datetime string '1561824000000' - value is not a string.
-2019-07-01 17:28:17,307 INFO: Microblog startup [in /Users/mosson/Documents/学习/mossonInfo/flaskBlogs/flaskBlog/app/__init__.py:46]
-2019-07-01 17:33:45,636 INFO: Microblog startup [in /Users/mosson/Documents/学习/mossonInfo/flaskBlogs/flaskBlog/app/__init__.py:46]
-2019-07-02 07:07:48,813 INFO: Microblog startup [in /Users/mosson/Documents/学习/mossonInfo/flaskBlogs/flaskBlog/app/__init__.py:46]
-2019-07-02 07:19:01,670 INFO: Microblog startup [in /Users/mosson/Documents/学习/mossonInfo/flaskBlogs/flaskBlog/app/__init__.py:46]

@@ -1,0 +1,110 @@
+2019-07-01 08:00:27,581 ERROR: Exception on / [GET] [in /Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/flask/app.py:1780]
+Traceback (most recent call last):
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/flask/app.py", line 1830, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/flask/app.py", line 2106, in preprocess_request
+    rv = func()
+  File "/Users/mosson/Documents/学习/mossonInfo/flaskBlogs/flaskBlog/app/routes.py", line 15, in before_request
+    if current_user.is_authenticated:
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/werkzeug/local.py", line 348, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/werkzeug/local.py", line 307, in _get_current_object
+    return self.__local()
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/flask_login/utils.py", line 26, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/flask_login/utils.py", line 335, in _get_user
+    current_app.login_manager._load_user()
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/flask_login/login_manager.py", line 359, in _load_user
+    return self.reload_user()
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/flask_login/login_manager.py", line 321, in reload_user
+    user = self.user_callback(user_id)
+  File "/Users/mosson/Documents/学习/mossonInfo/flaskBlogs/flaskBlog/app/models.py", line 13, in load_user
+    return User.query.get(int(id))
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 959, in get
+    return self._get_impl(ident, loading.load_on_pk_identity)
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 1069, in _get_impl
+    return db_load_fn(self, primary_key_identity)
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/sqlalchemy/orm/loading.py", line 282, in load_on_pk_identity
+    return q.one()
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3281, in one
+    ret = self.one_or_none()
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3250, in one_or_none
+    ret = list(self)
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/sqlalchemy/orm/loading.py", line 105, in instances
+    util.raise_from_cause(err)
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 383, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 129, in reraise
+    raise value
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/sqlalchemy/orm/loading.py", line 85, in instances
+    rows = [proc(row) for row in fetch]
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/sqlalchemy/orm/loading.py", line 85, in <listcomp>
+    rows = [proc(row) for row in fetch]
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/sqlalchemy/orm/loading.py", line 572, in _instance
+    populators,
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/sqlalchemy/orm/loading.py", line 693, in _populate_full
+    dict_[key] = getter(row)
+ValueError: Couldn't parse datetime string '1561824000000' - value is not a string.
+2019-07-01 08:00:29,895 ERROR: Exception on / [GET] [in /Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/flask/app.py:1780]
+Traceback (most recent call last):
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/flask/app.py", line 1830, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/flask/app.py", line 2106, in preprocess_request
+    rv = func()
+  File "/Users/mosson/Documents/学习/mossonInfo/flaskBlogs/flaskBlog/app/routes.py", line 15, in before_request
+    if current_user.is_authenticated:
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/werkzeug/local.py", line 348, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/werkzeug/local.py", line 307, in _get_current_object
+    return self.__local()
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/flask_login/utils.py", line 26, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/flask_login/utils.py", line 335, in _get_user
+    current_app.login_manager._load_user()
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/flask_login/login_manager.py", line 359, in _load_user
+    return self.reload_user()
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/flask_login/login_manager.py", line 321, in reload_user
+    user = self.user_callback(user_id)
+  File "/Users/mosson/Documents/学习/mossonInfo/flaskBlogs/flaskBlog/app/models.py", line 13, in load_user
+    return User.query.get(int(id))
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 959, in get
+    return self._get_impl(ident, loading.load_on_pk_identity)
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 1069, in _get_impl
+    return db_load_fn(self, primary_key_identity)
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/sqlalchemy/orm/loading.py", line 282, in load_on_pk_identity
+    return q.one()
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3281, in one
+    ret = self.one_or_none()
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3250, in one_or_none
+    ret = list(self)
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/sqlalchemy/orm/loading.py", line 105, in instances
+    util.raise_from_cause(err)
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 383, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 129, in reraise
+    raise value
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/sqlalchemy/orm/loading.py", line 85, in instances
+    rows = [proc(row) for row in fetch]
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/sqlalchemy/orm/loading.py", line 85, in <listcomp>
+    rows = [proc(row) for row in fetch]
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/sqlalchemy/orm/loading.py", line 572, in _instance
+    populators,
+  File "/Users/mosson/envs/flaskBlogs/lib/python3.6/site-packages/sqlalchemy/orm/loading.py", line 693, in _populate_full
+    dict_[key] = getter(row)
+ValueError: Couldn't parse datetime string '1561824000000' - value is not a string.

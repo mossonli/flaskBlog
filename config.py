@@ -17,3 +17,5 @@ class Config(object):
     MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
     ADMINS = ['your-email@example.com']#ADMINS配置变量是将接收错误报告的电子邮件地址列表，因此您自己的电子邮件地址应该在该列表中。
+
+    POSTS_PER_PAGE = 3
