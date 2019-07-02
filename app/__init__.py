@@ -9,6 +9,7 @@ from flask_migrate import Migrate
 from flask_login import LoginManager
 import logging
 from logging.handlers import SMTPHandler, RotatingFileHandler
+from flask_mail import Mail
 
 app = Flask(__name__)
 app.config.from_object(Config)
@@ -16,6 +17,8 @@ db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 login = LoginManager(app)
 login.login_view = 'login' # flask-login 指定处理登录的视图函数是谁  login函数
+
+mail = Mail(app)
 
 if not app.debug:
     if app.config['MAIL_SERVER']:
